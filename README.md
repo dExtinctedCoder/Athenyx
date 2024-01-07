@@ -1,6 +1,4 @@
-# Athenyx E-Commerce Web App
-
-![Athenyx Logo](/public/athenyx.png)
+# Athenyx E-Commerce Web App ![Athenyx Logo](/public/athenyx.png)
 
 Welcome to Athenyx, your modern e-commerce web app designed to provide a seamless shopping experience. This document serves as the official guide to help you get started with the installation, usage, and customization of Athenyx.
 
