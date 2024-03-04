@@ -22,7 +22,7 @@ const Homebar = () => {
           </Tooltip>
           <Tooltip>
             <TooltipTrigger>
-              <NavLink to="/shop" className="homebar text-[#9B9B9B] flex items-center flex-col">
+              <NavLink to="/category" className="homebar text-[#9B9B9B] flex items-center flex-col">
                 <FaShoppingCart width="30px" height="30px" className="w-[30px] h-[30px] mb-1" />
                 <p className="text-sm">Shop</p>
               </NavLink>

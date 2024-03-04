@@ -11,7 +11,7 @@ function Loader() {
 function App() {
   return (
     <>
-      <div className="app bg-[#F9F9F9] min-h-[100dvh] text-[#222]">
+      <div className="app no-scrollbar bg-[#F9F9F9] min-h-[100dvh] text-[#222]">
         <QueryClientProvider client={queryClient}>
           <Suspense fallback={Loader()}>
             <AppGlobalContext>

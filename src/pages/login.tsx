@@ -2,7 +2,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoCheckmarkSharp } from "react-icons/io5";
 import { Formik, Form, Field, ErrorMessage, FormikState } from 'formik'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import * as Yup from 'yup'
 
 type ValuesType = {
@@ -11,7 +11,7 @@ type ValuesType = {
 }
 
 const Login = () => {
-
+  const navigate = useNavigate()
   const initialValues = {
     email: "",
     password: "",
@@ -28,7 +28,9 @@ const Login = () => {
   }
   return (
     <div className="px-4">
-      <Link to="" className="py-3 block"><IoIosArrowBack className="w-6 h-6" /></Link>
+      <div className="py-3">
+        <IoIosArrowBack fontSize="24px" onClick={() => navigate(-1)} className="w-6 h-6 cursor-pointer" />
+      </div>
       <h2 className="py-[18px] text-[34px] font-bold">Login</h2>
       <Formik onSubmit={onSubmit} initialValues={initialValues} validationSchema={validationSchema}>
         {

@@ -6,3 +6,13 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+@layer utilities {
+  .homebar.active {
+    @apply text-[#DB3022] font-medium;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  div[role="dialog"] {
+  }
+}
