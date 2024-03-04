@@ -108,7 +108,7 @@ function Filter({ currentSettings }: FilterProps) {
       <div className="bg-white shadow-lg px-4 py-4 grid grid-cols-3 gap-x-8 gap-y-4">
         <Button onClick={() => setLocalCategory('all')} className={`capitalize px-4 py-2 border font-semibold ${localCategory.toLowerCase() === 'all' ? `bg-[#DB3022] hover:bg-red-700 text-white` : `bg-transparent text-gray-800 border-gray-300 hover:bg-gray-300`}`}>All</Button>
         {
-          currentSettings.categories.map(category => {
+          currentSettings.categories?.map(category => {
             return <Button
               key={category.id}
               onClick={() => setLocalCategory(category.name)}

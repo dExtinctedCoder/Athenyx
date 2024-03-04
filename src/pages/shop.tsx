@@ -14,10 +14,6 @@ const Shop = () => {
   const location = useLocation()
   const currentFilter = location.search.replace('?=', "")
 
-  if (isLoading) {
-    return <h1 className="text-5xl text-gray-600 text-center">Loading...</h1>
-  }
-
   if (!currentFilter.length) {
     return (
       <div className="pb-24">
@@ -43,9 +39,11 @@ const Shop = () => {
           <p className="text-[#9B9B9B] text-sm pt-4 pb-10 px-4">Choose category</p>
           <ul className="flex flex-col">
             {
-              data && data.map((category: { id: number, name: string }) => {
-                return <Link key={category.id} to={`?=${category.name}`} className="py-4 border-b-2 capitalize border-gray-200 px-4 text-lg font-medium">{category.name}</Link>
-              })
+              isLoading ?
+                <h1 className="text-5xl text-gray-600 text-center">Loading...</h1> :
+                data && data.map((category: { id: number, name: string }) => {
+                  return <Link key={category.id} to={`?=${category.name}`} className="py-4 border-b-2 capitalize border-gray-200 px-4 text-lg font-medium">{category.name}</Link>
+                })
             }
           </ul>
         </section>
